@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="MyDiscount" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@calculator.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculator.DiscountController">
+	<columnConstraints>
+		<ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="10.0" prefWidth="150.0" />
+		<ColumnConstraints hgrow="SOMETIMES" maxWidth="204.0" minWidth="10.0" prefWidth="146.0" />
+		<ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="149.0" />
+		<ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="10.0" prefWidth="152.0" />
+	</columnConstraints>
+	<rowConstraints>
+		<RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="73.0" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="105.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="96.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="78.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+	</rowConstraints>
+	<children>
+		<Button mnemonicParsing="false" onAction="#HandleOnAnyButton" prefHeight="46.0" prefWidth="150.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+		<Button mnemonicParsing="false" onAction="#HandleOnAnyButton" prefHeight="46.0" prefWidth="150.0" text="." GridPane.columnIndex="2" GridPane.rowIndex="9" />
+		<Button mnemonicParsing="false" onAction="#HandleOnAnyButton" prefHeight="46.0" prefWidth="150.0" text="1" GridPane.rowIndex="8" />
+		<Button mnemonicParsing="false" onAction="#HandleOnAnyButton" prefHeight="46.0" prefWidth="150.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+		<Button mnemonicParsing="false" onAction="#HandleOnAnyButton" prefHeight="46.0" prefWidth="150.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+		<Button mnemonicParsing="false" onAction="#HandleOnAnyButton" prefHeight="46.0" prefWidth="150.0" text="4" GridPane.rowIndex="7" />
+		<Button mnemonicParsing="false" onAction="#HandleOnAnyButton" prefHeight="46.0" prefWidth="150.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+		<Button mnemonicParsing="false" onAction="#HandleOnAnyButton" prefHeight="46.0" prefWidth="150.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+		<Button mnemonicParsing="false" onAction="#HandleOnAnyButton" prefHeight="46.0" prefWidth="150.0" text="7" GridPane.rowIndex="6" />
+		<Button mnemonicParsing="false" onAction="#HandleOnAnyButton" prefHeight="46.0" prefWidth="150.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+		<Button mnemonicParsing="false" onAction="#HandleOnAnyButton" prefHeight="46.0" prefWidth="150.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+		
+		<Button id="btn51m" mnemonicParsing="false" onAction="#HandleOnCrossButton" prefHeight="46.0" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+      <Button mnemonicParsing="false" onAction="#HandleOnAnyButton" prefHeight="46.0" prefWidth="150.0" text="AC" GridPane.rowIndex="9" />
+      <Label prefHeight="38.0" prefWidth="123.0" text="Original Price" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label prefHeight="38.0" prefWidth="270.0" text="Discount(%off)" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label prefHeight="38.0" prefWidth="123.0" text="Final Price" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="saved" prefHeight="38.0" prefWidth="160.0" text="You Saved 0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label prefHeight="48.0" prefWidth="336.0" text="Discount Calculator" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="CENTER">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <TextField fx:id="OrigPrice" editable="false" onMouseClicked="#HandleOnMouseOnOrigPriceField" prefHeight="37.0" prefWidth="152.0" text="0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <TextField fx:id="discount" editable="false" onMouseClicked="#HandleOnMouseOnDiscountField" prefHeight="37.0" prefWidth="152.0" text="0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+      <TextField fx:id="finPrice" editable="false" prefHeight="37.0" prefWidth="152.0" text="0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+      <Label onMouseClicked="#HandleOnBackButton" prefHeight="48.0" prefWidth="59.0" text=" &lt;">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Line endX="499.29290771484375" endY="0.7928932309150696" startX="-100.0" GridPane.rowIndex="1" />
+
+
+
+
+	</children>
+</GridPane>

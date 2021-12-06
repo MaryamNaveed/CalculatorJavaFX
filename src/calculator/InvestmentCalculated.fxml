@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="MyInvestmentCalculated" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@calculator.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculator.InvestmentCalculatedController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="80.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="233.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="460.0" minWidth="10.0" prefWidth="249.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="460.0" minWidth="10.0" prefWidth="40.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="129.0" minHeight="9.0" prefHeight="45.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="302.0" minHeight="0.0" prefHeight="12.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="302.0" minHeight="10.0" prefHeight="88.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="345.0" minHeight="10.0" prefHeight="164.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="345.0" minHeight="10.0" prefHeight="92.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label prefHeight="44.0" prefWidth="273.0" text="Investment Result" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Line endX="499.29290771484375" endY="0.7928932309150696" startX="-100.0" GridPane.rowIndex="1" />
+      <TextArea editable="false" prefHeight="223.0" prefWidth="497.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></TextArea>
+      <Label onMouseClicked="#handleOnBackButton" prefHeight="43.0" prefWidth="64.0" text="&lt;">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="percenProgress" prefHeight="25.0" prefWidth="243.0" progress="0.0" stylesheets="@calculator.css" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
+      <Label prefHeight="22.0" prefWidth="113.0" text="Total Investment" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP" />
+      <Label prefHeight="22.0" prefWidth="91.0" text="Total Interest" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP" />
+      <Label prefHeight="36.0" prefWidth="205.0" text="Total Value" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="investmentText" prefHeight="84.0" prefWidth="208.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</GridPane>
